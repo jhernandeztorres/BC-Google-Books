@@ -1,29 +1,43 @@
-# Create React Express App
+# Table of Contents <!-- omit in toc -->
+- [Google Books](#google-books)
+- [Starting Out](#starting-out)
+- [Contributing](#contributing)
+- [Technology Used](#technology-used)
+- [License](#license)
+- [Notes](#notes)
+- [Preview](#preview)
+  
+# Google Books
+This is a react site with mongodb. The site lets you search for books with the Google Books API and then lets you save the books to be viewed later. 
 
-## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+# Starting Out 
+1. Clone repo
+2. Go to folder in bash/terminal
+3. npm install
+4. See [notes](#notes) to run the app
+5. Enjoy
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+# Contributing
+1. Fork the repo
+2. Create your branch for the feature you want
+3. Commit your changes
+4. Push to the branch
+5. Submit a pull request
+   
+# Technology Used
+1. Node.js
+2. NPM [Express](https://www.npmjs.com/package/express)
+3. NPM [Axios](https://www.npmjs.com/package/axios)
+4. NPM [Mongoose](https://www.npmjs.com/package/mongoose)
+5. NPM [mongodb](https://www.npmjs.com/package/mongodb)
+6. NPM[react-router-dom](https://www.npmjs.com/package/react-router-dom)
+   
+# License
+N/A
 
-## Starting the app locally
+# Notes
+NPM start
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+# Preview
+Live application can be viewed here: [Heroku](https://bc-google-books.herokuapp.com)

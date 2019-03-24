@@ -18,7 +18,7 @@ const SearchResult = props => {
                 <div className="card-body player">
                     <div className="article">
                         <h3>Search Results</h3>
-                        {props.map(book => {
+                        {props.books.map(book => {
                             return (
                                 <li className="search-list list-group-item">
                                     <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>

@@ -3,22 +3,22 @@ import {Row, Col} from "../Grid"
 
 const SearchResult = props => {
     console.log(props);
-    if (props.length === 0){
-        return (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h3>Search Results</h3>
-                </div>
-            </div>
-        </div>
-    )} else {
+    // if (props.length === 0){
+    //     return (
+    //     <div className="card">
+    //         <div className="card-body player">
+    //             <div className="article">
+    //                 <h3>Search Results</h3>
+    //             </div>
+    //         </div>
+    //     </div>
+    // )} else {
         return (
             <div className="card">
                 <div className="card-body player">
                     <div className="article">
                         <h3>Search Results</h3>
-                        {props.books.map(book => {
+                        {props.results.map(book => {
                             return (
                                 <li className="search-list list-group-item">
                                     <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
@@ -58,5 +58,5 @@ const SearchResult = props => {
                 </div>
             </div>
         )}
-}
+// }
 export default SearchResult

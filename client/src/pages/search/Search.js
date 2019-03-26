@@ -12,13 +12,17 @@ class Search extends Component {
     image:[],
     link: [],
     error: "",
-    results: []
+    results: [],
+    books: []
   };
 
   componentDidMount() {
-    API.getBookTitle("Harry Potter and the Sorcerors Stone")
-    .then(res => this.setState({ results: res.data.message }))
-    .catch(err => console.log(err));
+    this.loadBooks("Harry Potter")
+    
+  }
+
+  loadBooks = (query) => {
+    API.getBookTitle(query).then(res => this.setState({book: res.data.items})).catch(error => console.log(error));
   }
 
   handleInputChange = event => {
@@ -40,17 +44,8 @@ class Search extends Component {
   render() {
     return (
       <div>
-        {/* <Saved></Saved> */}
         <Container style={{ minHeight: "80%" }}>
           <h1 className="text-center">Search For A Book Title</h1>
-
-
-        {/* ALERT */}
-          <div type="danger" style={{ opacity: this.state.error ? 1 : 0, marginBottom: 10 }}>
-            {this.state.error}
-          </div>
-        {/* ALERT */}
-
           <SearchForm handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} saved={this.state.saved} />
           <SearchResults results={this.state.results} />
         </Container>

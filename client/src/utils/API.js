@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default {
-    getBookTitle: function(searchedTitle) {
-        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + searchedTitle);
+    getBookTitle: function(query) {
+        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query + ":keyes&key=AIzaSyATJh5KT_Sm3uL7xyh4vchsDjC9Y7TB5G0");
     },
 
     getBooks: function(){
